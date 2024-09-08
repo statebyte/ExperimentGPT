@@ -2,8 +2,13 @@ import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 # Загрузка модели и токенизатора GPT-3
-model_name = 'ai-forever/ruGPT-3.5-13B'
+
+# model_name = 'ai-forever/ruGPT-3.5-13B'
+model_name = 'ai-forever/rugpt3large_based_on_gpt2'
 cache_dir = "D:/models/huggingface"
+print("Init model: " + model_name)
+print("cache path: " + cache_dir)
+
 model = GPT2LMHeadModel.from_pretrained(model_name, cache_dir=cache_dir)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name, cache_dir=cache_dir)
 
